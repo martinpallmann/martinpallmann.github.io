@@ -1,0 +1,5 @@
+source: _source
+include: 
+  - .well-known
+timezone: Europe/Berlin
+
