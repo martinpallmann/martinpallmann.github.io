@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/martinpallmann
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://martinpallmann.de
+  * I am martinpallmann (https://keybase.io/martinpallmann) on keybase.
+  * I have a public key ASCFWPrpG7yIwx6VlHEthkmAeb4PNzVV_CUZ78LDvPcgyQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f99b2d64160962e6cd7976b05e75093d5b160be3ff22ada465a9ac86d6d4cacc0a",
+      "host": "keybase.io",
+      "kid": "01208558fae91bbc88c31e9594712d86498079be0f373555fc2519efc2c3bcf720c90a",
+      "uid": "755682f0bcd8d4e088be79fc135cdd19",
+      "username": "martinpallmann"
+    },
+    "merkle_root": {
+      "ctime": 1565073001,
+      "hash": "63dbe0da7835bcc9cabe325e417974651bdd9bde1f8035f1737a9166dfab3156b34ecec11a759e81db3b4fdf5b186e5f9641f2fde2ce98a7b91abde69dee4489",
+      "hash_meta": "2bb10a0b80d8c8a6be783b2aac266b0e84ac55e2a5cdcf1a418b40a77e88ac21",
+      "seqno": 5950114
+    },
+    "service": {
+      "entropy": "zMSvG2AfLFd62tPOJTHljYdV",
+      "hostname": "martinpallmann.de",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.2.0"
+  },
+  "ctime": 1565073019,
+  "expire_in": 504576000,
+  "prev": "aaefd8fb497d5709ca825c7defa109a0f6d282a069d95fc8aabfab2996bf955c",
+  "seqno": 40,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEghVj66Ru8iMMelZRxLYZJgHm+Dzc1VfwlGe/Cw7z3IMkKp3BheWxvYWTESpcCKMQgqu/Y+0l9VwnKglx976EJoPbSgqBp2V/Iqr+rKZa/lVzEICYRW9JO0AA9A6x9A3kkssiLKrP214ZSw82odBo295EiAgHCo3NpZ8RA3Bx8YHoSXqO8W4RllQWGLxxmqb02VQ8Wu1SLhGh6kTVvV68MQxY7xk5xooDT29aJtePew/IbpbITtYSk6HR3AKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILxtKXzVMRu+6VwRZFNHI8FmYHpwbmm4f/F+HwSBhvYbo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/martinpallmann
+
+==================================================================
