@@ -1,8 +1,6 @@
 ---
-title: Index
+title: About
 ---
-
-# About
 
 I'm a Berlin based software writer.
 I'm to lazy to set up a proper website. So this is what you get.
