@@ -13,3 +13,6 @@ Or view my GitHub profile: https://github.com/martinpallmann
 
 * [lockdown](/covid-19/lockdown) - Lockdown-Skala
 * [gchat](/gchat/) - a google chat bot creation library
+
+---
+Martin Pallmann
