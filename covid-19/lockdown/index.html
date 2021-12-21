@@ -1,0 +1,160 @@
+---
+title: Lockdown-Skala
+permalink: /covid-19/lockdown
+---
+
+<p>
+  Es geht hierbei vor allem darum, zwischen "Lockdown", "Lockdown" und "Lockdown" unterscheiden zu können.
+  "Wie hart schränken Maßnahmen den Alltag ein?" ist die Leitfrage; nicht wie gut sie wirken.
+</p>
+
+<hr>
+
+<form id="form_1">
+
+  <h2>
+    Lockdown-Skala: <i id="result_0">0</i>
+  </h2>
+
+  <h3>Schulen</h3>
+  <input type="radio" id="school_0" name="school" value="0" checked onclick="calc()">
+  <label for="school_0">Nichts</label>
+  <br>
+  <input type="radio" id="school_1" name="school" value="1" onclick="calc()">
+  <label for="school_1">Empfohlene Schließungen</label>
+  <br>
+  <input type="radio" id="school_2" name="school" value="2" onclick="calc()">
+  <label for="school_2">Verpflichtende Schließungen für einige Altersstufen</label>
+  <br>
+  <input type="radio" id="school_3" name="school" value="3" onclick="calc()">
+  <label for="school_3">Verpflichtende Schließungen für alle Altersstufen</label>
+  <br>
+
+  <h3>Arbeitsplätze</h3>
+  <input type="radio" id="work_0" name="work" value="0" checked onclick="calc()">
+  <label for="work_0">Nichts</label>
+  <br>
+  <input type="radio" id="work_1" name="work" value="1" onclick="calc()">
+  <label for="work_1">Empfohlenes Homeoffice</label>
+  <br>
+  <input type="radio" id="work_2" name="work" value="2" onclick="calc()">
+  <label for="work_2">Verpflichtendes Homeoffice/Schließungen für einige Sektoren</label>
+  <br>
+  <input type="radio" id="work_3" name="work" value="3" onclick="calc()">
+  <label for="work_3">Verpflichtende Schließungen für alle nicht-essenzielle Sektoren</label>
+  <br>
+
+  <h3>Öffentliche Veranstaltungen</h3>
+  <input type="radio" id="public_0" name="public" value="0" checked onclick="calc()">
+  <label for="public_0">Nichts</label>
+  <br>
+  <input type="radio" id="public_1" name="public" value="1" onclick="calc()">
+  <label for="public_1">Empfohlene Schließungen</label>
+  <br>
+  <input type="radio" id="public_2" name="public" value="2" onclick="calc()">
+  <label for="public_2">Verpflichtende Schließungen</label>
+
+  <h3>Zusammentreffen</h3>
+  <input type="radio" id="meet_0" name="meet" value="0" checked onclick="calc()">
+  <label for="meet_0">Nichts</label>
+  <br>
+  <input type="radio" id="meet_1" name="meet" value="1" onclick="calc()">
+  <label for="meet_1">Limit ist über 1.000 Menschen</label>
+  <br>
+  <input type="radio" id="meet_2" name="meet" value="2" onclick="calc()">
+  <label for="meet_2">Limit ist zwischen 101 und 1.000 Menschen</label>
+  <br>
+  <input type="radio" id="meet_3" name="meet" value="3" onclick="calc()">
+  <label for="meet_3">Limit ist zwischen 11 und 100 Menschen</label>
+  <br>
+  <input type="radio" id="meet_4" name="meet" value="4" onclick="calc()">
+  <label for="meet_4">Limit ist zwischen 1 und 10 Menschen</label>
+
+  <h3>Nahverkehr</h3>
+  <input type="radio" id="transport_0" name="transport" value="0" checked onclick="calc()">
+  <label for="transport_0">Nichts</label>
+  <br>
+  <input type="radio" id="transport_1" name="transport" value="1" onclick="calc()">
+  <label for="transport_1">Empfohlene Reduktion</label>
+  <br>
+  <input type="radio" id="transport_2" name="transport" value="2" onclick="calc()">
+  <label for="transport_2">Verpflichtende Schließung für die meisten Menschen</label>
+
+  <h3>Ausgangsbeschränkungen</h3>
+  <input type="radio" id="restrict_0" name="restrict" value="0" checked onclick="calc()">
+  <label for="restrict_0">Nichts</label>
+  <br>
+  <input type="radio" id="restrict_1" name="restrict" value="1" onclick="calc()">
+  <label for="restrict_1">Empfehlung, Haus nicht zu verlassen</label>
+  <br>
+  <input type="radio" id="restrict_2" name="restrict" value="2" onclick="calc()">
+  <label for="restrict_2">Verpflichtung, Haus nur für Sport, Einkäufe und "nötige" Trips zu verlassen</label>
+  <br>
+  <input type="radio" id="restrict_3" name="restrict" value="3" onclick="calc()">
+  <label for="restrict_3">Verpflichtung, bis auf festgelegte Ausnahmezeitpunkte im Haus zu bleiben</label>
+
+  <h3>Nationale Reisen</h3>
+  <input type="radio" id="travel_nat_0" name="travel_nat" value="0" checked onclick="calc()">
+  <label for="travel_nat_0">Nichts</label>
+  <br>
+  <input type="radio" id="travel_nat_1" name="travel_nat" value="1" onclick="calc()">
+  <label for="travel_nat_1">Empfehlung, nicht zu reisen</label>
+  <br>
+  <input type="radio" id="travel_nat_2" name="travel_nat" value="2" onclick="calc()">
+  <label for="travel_nat_2">Verbote, bestimmte Reisen zu unternehmen</label>
+
+  <h3>Internationale Reisen</h3>
+  <input type="radio" id="travel_int_0" name="travel_int" value="0" checked onclick="calc()">
+  <label for="travel_int_0">Nichts</label>
+  <br>
+  <input type="radio" id="travel_int_1" name="travel_int" value="1" onclick="calc()">
+  <label for="travel_int_1">Testpflicht vor Reisen</label>
+  <br>
+  <input type="radio" id="travel_int_2" name="travel_int" value="2" onclick="calc()">
+  <label for="travel_int_2">Quarantäne für Reisene aus Hochrisikogebieten</label>
+  <br>
+  <input type="radio" id="travel_int_3" name="travel_int" value="3" onclick="calc()">
+  <label for="travel_int_3">Limitierte Reiseziele</label>
+  <br>
+  <input type="radio" id="travel_int_4" name="travel_int" value="4" onclick="calc()">
+  <label for="travel_int_4">Jegliches Reisen untersagt</label>
+
+  <h2>
+    Lockdown-Skala: <i id="result_1">0</i>
+  </h2>
+
+</form>
+
+<hr>
+
+<p>
+  Quelle für die Methodik:
+  <a href="https://www.bsg.ox.ac.uk/sites/default/files/2021-06/BSG-WP-2020-032-v12_0.pdf">https://www.bsg.ox.ac.uk/sites/default/files/2021-06/BSG-WP-2020-032-v12_0.pdf</a>
+  <br>
+  Autor: Marcus Ewald / <a href="https://twitter.com/maewald">@maewald</a> / 20.12.2021
+</p>
+
+<script type="text/javascript">
+  if (history.state) {
+    history.state.selected.forEach(id =>
+      document.getElementById(id).checked = true
+    )
+  }
+
+  function calc() {
+    let result = 0;
+    const state = {"selected": []}
+    Array.from(document.getElementById("form_1").elements)
+      .forEach(element => {
+          if (element.checked) {
+            state.selected.push(element.id)
+            result = result + parseInt(element.value);
+          }
+        }
+      )
+    console.log(state)
+    history.replaceState(state, '')
+    document.getElementById("result_0").innerText = result;
+    document.getElementById("result_1").innerText = result;
+  }
+</script>
