@@ -11,8 +11,5 @@ Or view my GitHub profile: https://github.com/martinpallmann
 
 ## Projects
 
-* [lockdown](/covid-19/lockdown) - Lockdown-Skala
-* [gchat](/gchat/) - a google chat bot creation library
-
----
-Martin Pallmann
+[lockdown](/covid-19/lockdown) - Lockdown-Skala  
+[gchat](/gchat/) - a google chat bot creation library
