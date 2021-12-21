@@ -1,6 +1,7 @@
 ---
 title: Lockdown-Skala
 permalink: /covid-19/lockdown
+layout: lockdown
 ---
 
 <p>
@@ -149,6 +150,7 @@ permalink: /covid-19/lockdown
   initial.forEach(id =>
     document.getElementById(id).checked = true
   )
+  calc();
 
   function calc() {
     let result = 0;
