@@ -141,6 +141,8 @@ permalink: /covid-19/lockdown
     )
   }
 
+  calc()
+
   function calc() {
     let result = 0;
     const state = {"selected": []}
@@ -152,7 +154,6 @@ permalink: /covid-19/lockdown
           }
         }
       )
-    console.log(state)
     history.replaceState(state, '')
     document.getElementById("result_0").innerText = result;
     document.getElementById("result_1").innerText = result;
