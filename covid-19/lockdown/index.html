@@ -132,29 +132,42 @@ permalink: /covid-19/lockdown
   <a href="https://www.bsg.ox.ac.uk/sites/default/files/2021-06/BSG-WP-2020-032-v12_0.pdf">https://www.bsg.ox.ac.uk/sites/default/files/2021-06/BSG-WP-2020-032-v12_0.pdf</a>
   <br>
   Autor: Marcus Ewald / <a href="https://twitter.com/maewald">@maewald</a> / 20.12.2021
+  <br>
+  Quelltext: <a href="https://github.com/martinpallmann/martinpallmann.github.io/tree/master/covid-19/lockdown">https://github.com/martinpallmann/martinpallmann.github.io/tree/master/covid-19/lockdown</a>
 </p>
 
 <script type="text/javascript">
-  if (history.state) {
-    history.state.selected.forEach(id =>
-      document.getElementById(id).checked = true
-    )
-  }
 
-  calc()
+  let initial = [];
+
+  if (window.location.hash) {
+    const hash = window.location.hash.substring(1);
+    initial = hash.split(",")
+  } else if (history.state) {
+    initial = history.state.selected;
+  }
+  initial.forEach(id =>
+    document.getElementById(id).checked = true
+  )
 
   function calc() {
     let result = 0;
+    let hash = "#"
     const state = {"selected": []}
     Array.from(document.getElementById("form_1").elements)
       .forEach(element => {
           if (element.checked) {
+            if (hash === "#") {
+              hash = hash + element.id
+            } else {
+              hash = hash + "," + element.id
+            }
             state.selected.push(element.id)
             result = result + parseInt(element.value);
           }
         }
       )
-    history.replaceState(state, '')
+    history.replaceState(state, '', hash)
     document.getElementById("result_0").innerText = result;
     document.getElementById("result_1").innerText = result;
   }
