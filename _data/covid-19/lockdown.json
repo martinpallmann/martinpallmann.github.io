@@ -1,0 +1,176 @@
+{
+  "sections": [
+    {
+      "id": "school",
+      "name": "Schulen",
+      "value": [
+        {
+          "name": "Nichts",
+          "value": 0
+        },
+        {
+          "name": "Empfohlene Schließungen",
+          "value": 1
+        },
+        {
+          "name": "Empfohlene Schließungen",
+          "value": 2
+        },
+        {
+          "name": "Verpflichtende Schließungen für einige Altersstufen",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "name": "Arbeitsplätze",
+      "value": [
+        {
+          "name": "Nichts",
+          "value": 0
+        },
+        {
+          "name": "Empfohlenes Homeoffice",
+          "value": 1
+        },
+        {
+          "name": "Verpflichtendes Homeoffice/Schließungen für einige Sektoren",
+          "value": 2
+        },
+        {
+          "name": "Verpflichtende Schließungen für alle nicht-essenzielle Sektoren",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "public",
+      "name": "Öffentliche Veranstaltungen",
+      "value": [
+        {
+          "name": "Nichts",
+          "value": 0
+        },
+        {
+          "name": "Empfohlene Schließungen",
+          "value": 1
+        },
+        {
+          "name": "Verpflichtende Schließungen",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "meet",
+      "name": "Zusammentreffen",
+      "value": [
+        {
+          "name": "Nichts",
+          "value": 0
+        },
+        {
+          "name": "Limit ist über 1.000 Menschen",
+          "value": 1
+        },
+        {
+          "name": "Limit ist zwischen 101 und 1.000 Menschen",
+          "value": 2
+        },
+        {
+          "name": "Limit ist zwischen 11 und 100 Menschen",
+          "value": 3
+        },
+        {
+          "name": "Limit ist zwischen 1 und 10 Menschen",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "Nahverkehr",
+      "value": [
+        {
+          "name": "Nichts",
+          "value": 0
+        },
+        {
+          "name": "Empfohlene Reduktion",
+          "value": 1
+        },
+        {
+          "name": "Verpflichtende Schließung für die meisten Menschen",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "restrict",
+      "name": "Ausgangsbeschränkungen",
+      "value": [
+        {
+          "name": "Nichts",
+          "value": 0
+        },
+        {
+          "name": "Empfehlung, Haus nicht zu verlassen",
+          "value": 1
+        },
+        {
+          "name": "Verpflichtung, Haus nur für Sport, Einkäufe und \"nötige\" Trips zu verlassen",
+          "value": 2
+        },
+        {
+          "name": "Verpflichtung, bis auf festgelegte Ausnahmezeitpunkte im Haus zu bleiben",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "travel_nat",
+      "name": "Nationale Reisen",
+      "value": [
+        {
+          "name": "Nichts",
+          "value": 0
+        },
+        {
+          "name": "Empfehlung, nicht zu reisen",
+          "value": 1
+        },
+        {
+          "name": "Verbote, bestimmte Reisen zu unternehmen",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "travel_int",
+      "name": "Internationale Reisen",
+      "value": [
+        {
+          "name": "Nichts",
+          "value": 0
+        },
+        {
+          "name": "Testpflicht vor Reisen",
+          "value": 1
+        },
+        {
+          "name": "Quarantäne für Reisen aus Hochrisikogebieten",
+          "value": 2
+        },
+        {
+          "name": "Limitierte Reiseziele",
+          "value": 3
+        },
+        {
+          "name": "Jegliches Reisen untersagt",
+          "value": 4
+        }
+      ]
+    }
+  ]
+}
