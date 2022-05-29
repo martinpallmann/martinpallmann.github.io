@@ -1,20 +1,21 @@
     html {
       overflow-y: scroll;
+      font-family: Georgia, 'Times New Roman', Times, serif
     }
     body {
-      margin:40px auto;
-      max-width:800px;
-      line-height:1.6;
-      font-size:18px;
-      color:#444;
-      padding:0 10px
+      margin: 40px auto;
+      max-width: 800px;
+      line-height: 1.6;
+      font-size: 18px;
+      color: #444;
+      padding: 0 10px
     }
     h1,h2,h3 {
-      line-height:1.2
+      line-height: 1.2
     }
     hr {
-      color:#ccc;
-      background-color:#ccc;
+      color: #ccc;
+      background-color: #ccc;
       height: 1px;
       border: none;
     }
