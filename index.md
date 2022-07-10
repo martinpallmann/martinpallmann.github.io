@@ -13,4 +13,4 @@ Or view my GitHub profile: [https://github.com/martinpallmann](https://github.co
 
 - [mockbridge](/mockbridge/) - Wiremock without the wire
 - [lockdown](/covid-19/lockdown) - Lockdown-Skala  
-- [gchat](/gchat/) - a google chat bot creation library
+- <del>[gchat](/gchat/) - a google chat bot creation library</del>
