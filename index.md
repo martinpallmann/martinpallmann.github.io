@@ -6,6 +6,8 @@ title: About
 alt="Martin"
 style="float: right; margin-left: 10px; height: 230px; width: 230px;" />
 
+# About me
+
 I'm a Berlin based software writer.  
 I'm too lazy to set up a proper website. So this is what you get.
 
