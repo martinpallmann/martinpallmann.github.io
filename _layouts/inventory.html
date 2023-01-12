@@ -4,13 +4,15 @@ layout: default
 {% assign container = site.data.inventory[page.container] %}
 <h1>{{ container.name }}</h1>
 
-{% assign i1 = container.items.length / 3 %}
-{% assign i2 = container.items.length / 3 * 2 %}
+{% assign i1 = container.items | size | divided_by: 3 %}
+{% assign i2 = container.items | size | divided_by: 3 | times: 2 %}
 
 <h2>i0: 0</h2>
 <h2>i1: {{ i1 }}</h2>
 <h2>i2: {{ i2 }}</h2>
-<h2>i2: {{ container.items.length }}</h2>
+<h2>i3: {{ container.items | size }}</h2>
+
+
 
 <div class="image-gallery">
 
