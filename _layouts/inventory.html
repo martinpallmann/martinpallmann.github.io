@@ -8,7 +8,7 @@ layout: default
 
   <div class="column">
     {% for item in container.items %}
-    {% if forloop.index0 % 3 == 0 %}
+    {% if forloop.index0 | modulo: 3 == 0 %}
     <div class="image-item">
       <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
       <div class="overlay"><span>{{ item.name }}</span></div>
@@ -19,7 +19,7 @@ layout: default
 
   <div class="column">
     {% for item in container.items %}
-    {% if forloop.index0 % 3 == 1 %}
+    {% if forloop.index0 | modulo: 3 == 1 %}
     <div class="image-item">
       <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
       <div class="overlay"><span>{{ item.name }}</span></div>
@@ -30,7 +30,7 @@ layout: default
 
   <div class="column">
     {% for item in container.items %}
-    {% if forloop.index0 % 3 == 2 %}
+    {% if forloop.index0 | modulo: 3 == 2 %}
     <div class="image-item">
       <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
       <div class="overlay"><span>{{ item.name }}</span></div>
