@@ -3,6 +3,10 @@
     "name": "Systainer Elektro 1",
     "items": [
       {
+        "name": "Seitenschneider Keiba",
+        "img": "seitenschneider-keiba.jpg"
+      },
+      {
         "name": "Flachrundzange Knipex",
         "img": "flachrundzange-knipex.jpg"
       },
@@ -17,10 +21,6 @@
       {
         "name": "Duspol Benning",
         "img": "duspol-benning.jpg"
-      },
-      {
-        "name": "Seitenschneider Keiba",
-        "img": "seitenschneider-keiba.jpg"
       },
       {
         "name": "Arbeitsleuchte Bosch",
