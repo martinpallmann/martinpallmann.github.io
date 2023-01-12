@@ -25,6 +25,10 @@
       {
         "name": "Arbeitsleuchte Bosch",
         "img": "arbeitsleuchte-bosch.jpg"
+      },
+      {
+        "name": "Wago-Klemme",
+        "img": "wago-klemme.jpg"
       }
     ]
   }
