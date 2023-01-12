@@ -4,24 +4,56 @@ layout: default
 {% assign container = site.data.inventory[page.container] %}
 <h1>{{ container.name }}</h1>
 
-<div class="container">
-  <ul 
-  class="image-gallery">
+<div class="image-gallery">
+  <div class="column">
     {% for item in container.items %}
-    <li>
-      <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" 
-      />
+    <div class="image-item">
+      <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
       <div class="overlay"><span>{{ item.name }}</span></div>
-    </li>
+    </div>
     {% endfor %}
-  </ul>
+    <div class="image-item">
+      <img src="https://source.unsplash.com/e6FMMambeO4" alt="" />
+      <div class="overlay"><span>Image title</span></div>
+    </div>
+    <div class="image-item">
+      <img src="https://source.unsplash.com/klCiPmzUw0Y" alt="" />
+      <div class="overlay"><span>Image title</span></div>
+    </div>
+  </div>
+
+  <div class="column">
+    {% for item in container.items %}
+    <div class="image-item">
+      <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
+      <div class="overlay"><span>{{ item.name }}</span></div>
+    </div>
+    {% endfor %}
+    <div class="image-item">
+      <img src="https://source.unsplash.com/e6FMMambeO4" alt="" />
+      <div class="overlay"><span>Image title</span></div>
+    </div>
+    <div class="image-item">
+      <img src="https://source.unsplash.com/klCiPmzUw0Y" alt="" />
+      <div class="overlay"><span>Image title</span></div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    {% for item in container.items %}
+    <div class="image-item">
+      <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
+      <div class="overlay"><span>{{ item.name }}</span></div>
+    </div>
+    {% endfor %}
+    <div class="image-item">
+      <img src="https://source.unsplash.com/e6FMMambeO4" alt="" />
+      <div class="overlay"><span>Image title</span></div>
+    </div>
+    <div class="image-item">
+      <img src="https://source.unsplash.com/klCiPmzUw0Y" alt="" />
+      <div class="overlay"><span>Image title</span></div>
+    </div>
+  </div>
 </div>
-
-
-{% for item in container.items %}
-{{ item.name }}<br>
-<img 
-  style="object-fit: cover; width: 230px; height: 230px;"
-  src="/inventory/{{ page.container }}/{{ item.img }}"
->
-{% endfor %}
