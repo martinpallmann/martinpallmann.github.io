@@ -4,6 +4,20 @@ layout: default
 {% assign container = site.data.inventory[page.container] %}
 <h1>{{ container.name }}</h1>
 
+<div class="container">
+  <ul 
+  class="image-gallery">
+    {% for item in container.items %}
+    <li>
+      <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" 
+      />
+      <div class="overlay"><span>{{ item.name }}</span></div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
 {% for item in container.items %}
 {{ item.name }}<br>
 <img 
