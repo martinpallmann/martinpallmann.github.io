@@ -1,10 +1,10 @@
 ---
+layout: default
 title: Inventory
 permalink: /inventory/
-layout: default
 ---
 <h1>Inventory</h1>
 
-{% for container in site.data.inventory.containers %}
+{% for container in site.data.inventory %}
 <a href="/inventory/{{ container.id }}">{{ container.name }}</a><br>
 {% endfor %}

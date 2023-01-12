@@ -1,10 +1,13 @@
 ---
+layout: default
 title: Systainer Elektro 1
 permalink: /inventory/systainer-elektro-1
-layout: default
+container: systainer-elektro-1
 ---
-<h1>Systainer Elektro 1</h1>
+{% assign container = site.data.inventory[page.container] %}
+<h1>{{ container.name }}</h1>
 
-{% for container in site.data.inventory %}
-<a href="/inventory/{{ container }}">{{ container.name }}</a><br>
+{% for intem in container.items %}
+{{ item.name }}<br>
+{{ item.img }}
 {% endfor %}
