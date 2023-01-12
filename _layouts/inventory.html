@@ -1,0 +1,10 @@
+---
+layout: default
+---
+{% assign container = site.data.inventory[page.container] %}
+<h1>{{ container.name }}</h1>
+
+{% for item in container.items %}
+{{ item.name }}<br>
+{{ item.img }}
+{% endfor %}
