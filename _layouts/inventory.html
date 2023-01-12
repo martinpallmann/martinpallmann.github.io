@@ -5,55 +5,38 @@ layout: default
 <h1>{{ container.name }}</h1>
 
 <div class="image-gallery">
+
   <div class="column">
     {% for item in container.items %}
+    {% if forloop.index0 % 3 == 0 %}
     <div class="image-item">
       <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
       <div class="overlay"><span>{{ item.name }}</span></div>
     </div>
+    {% endif %}
     {% endfor %}
-    <div class="image-item">
-      <img src="https://source.unsplash.com/e6FMMambeO4" alt="" />
-      <div class="overlay"><span>Image title</span></div>
-    </div>
-    <div class="image-item">
-      <img src="https://source.unsplash.com/klCiPmzUw0Y" alt="" />
-      <div class="overlay"><span>Image title</span></div>
-    </div>
   </div>
 
   <div class="column">
     {% for item in container.items %}
+    {% if forloop.index0 % 3 == 1 %}
     <div class="image-item">
       <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
       <div class="overlay"><span>{{ item.name }}</span></div>
     </div>
+    {% endif %}
     {% endfor %}
-    <div class="image-item">
-      <img src="https://source.unsplash.com/e6FMMambeO4" alt="" />
-      <div class="overlay"><span>Image title</span></div>
-    </div>
-    <div class="image-item">
-      <img src="https://source.unsplash.com/klCiPmzUw0Y" alt="" />
-      <div class="overlay"><span>Image title</span></div>
-    </div>
   </div>
-
 
   <div class="column">
     {% for item in container.items %}
+    {% if forloop.index0 % 3 == 2 %}
     <div class="image-item">
       <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
       <div class="overlay"><span>{{ item.name }}</span></div>
     </div>
+    {% endif %}
     {% endfor %}
-    <div class="image-item">
-      <img src="https://source.unsplash.com/e6FMMambeO4" alt="" />
-      <div class="overlay"><span>Image title</span></div>
-    </div>
-    <div class="image-item">
-      <img src="https://source.unsplash.com/klCiPmzUw0Y" alt="" />
-      <div class="overlay"><span>Image title</span></div>
-    </div>
   </div>
+
 </div>
