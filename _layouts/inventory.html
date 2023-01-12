@@ -12,6 +12,23 @@ layout: default
 <h2>i2: {{ i2 }}</h2>
 <h2>i3: {{ container.items | size }}</h2>
 
+<h3>1</h3>
+
+{% for item in container.items | slice: 0, i1 %}
+{{ item.name }}<br>
+{% endfor %}
+
+<h3>2</h3>
+
+{% for item in container.items | slice: i1, i1 %}
+{{ item.name }}<br>
+{% endfor %}
+
+<h3>3</h3>
+
+{% for item in container.items | slice: i2, i1 %}
+{{ item.name }}<br>
+{% endfor %}
 
 
 <div class="image-gallery">
