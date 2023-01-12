@@ -3,46 +3,13 @@ layout: default
 ---
 {% assign container = site.data.inventory[page.container] %}
 <h1>{{ container.name }}</h1>
-
-{% assign size = container.items | size %}
-{% assign i1 = size | divided_by: 3 %}
-{% assign i2 = size | divided_by: 3 | times: 2 %}
-{% assign c1 = container.items | slice: 0, i1 %}
-{% assign c2 = container.items | slice: i1, i1 %}
-{% assign c3 = container.items | slice: i2, size %}
-
-<!--
-i1: {{ i1 }}
-i2: {{ i2 }}
--->
-
-<div class="image-gallery">
-
-  <div class="column">
-    {% for item in c1 %}
-    <div class="image-item">
+<ul class="inventory clearfix">
+{% for item in container.items %}
+  <li>
+    <figure>
       <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
-      <div class="overlay"><span>{{ item.name }}</span></div>
-    </div>
-    {% endfor %}
-  </div>
-
-  <div class="column">
-    {% for item in c2 %}
-    <div class="image-item">
-      <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
-      <div class="overlay"><span>{{ item.name }}</span></div>
-    </div>
-    {% endfor %}
-  </div>
-
-  <div class="column">
-    {% for item in c3 %}
-    <div class="image-item">
-      <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
-      <div class="overlay"><span>{{ item.name }}</span></div>
-    </div>
-    {% endfor %}
-  </div>
-
-</div>
+      <figcaption>{{ item.name }}</figcaption>
+    </figure>
+  </li>
+{% endfor %}
+</ul>
