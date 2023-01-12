@@ -7,7 +7,7 @@ container: systainer-elektro-1
 {% assign container = site.data.inventory[page.container] %}
 <h1>{{ container.name }}</h1>
 
-{% for intem in container.items %}
+{% for item in container.items %}
 {{ item.name }}<br>
 {{ item.img }}
 {% endfor %}
