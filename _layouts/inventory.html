@@ -6,67 +6,41 @@ layout: default
 
 {% assign i1 = container.items | size | divided_by: 3 %}
 {% assign i2 = container.items | size | divided_by: 3 | times: 2 %}
-
-<h2>i0: 0</h2>
-<h2>i1: {{ i1 }}</h2>
-<h2>i2: {{ i2 }}</h2>
-<h2>i3: {{ container.items | size }}</h2>
-
 {% assign c1 = container.items | slice: 0, i1 %}
 {% assign c2 = container.items | slice: i1, i1 %}
 {% assign c3 = container.items | slice: i2, i1 %}
 
-<h3>1</h3>
-
-{% for item in c1 %}
-{{ item.name }}<br>
-{% endfor %}
-
-<h3>2</h3>
-
-{% for item in c2 %}
-{{ item.name }}<br>
-{% endfor %}
-
-<h3>3</h3>
-
-{% for item in c3 %}
-{{ item.name }}<br>
-{% endfor %}
-
+<!--
+i1: {{ i1 }}
+i2: {{ i2 }}
+-->
 
 <div class="image-gallery">
 
   <div class="column">
-    {% for item in container.items %}
-    {% if forloop.index0 | modulo: 3 == 0 %}
+    {% for item in c1 %}
     <div class="image-item">
       <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
       <div class="overlay"><span>{{ item.name }}</span></div>
     </div>
-    {% endif %}
     {% endfor %}
   </div>
 
   <div class="column">
-    {% for item in container.items %}
-    {% if forloop.index0 | modulo: 3 == 1 %}
+    {% for item in c2 %}
     <div class="image-item">
       <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
       <div class="overlay"><span>{{ item.name }}</span></div>
     </div>
-    {% endif %}
     {% endfor %}
   </div>
 
   <div class="column">
-    {% for item in container.items %}
-    {% if forloop.index0 | modulo: 3 == 2 %}
+    {% for item in c3 %}
     <div class="image-item">
       <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
       <div class="overlay"><span>{{ item.name }}</span></div>
     </div>
-    {% endif %}
     {% endfor %}
   </div>
 
