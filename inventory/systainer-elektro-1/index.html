@@ -4,3 +4,7 @@ permalink: /inventory/systainer-elektro-1
 layout: default
 ---
 <h1>Systainer Elektro 1</h1>
+
+{% for container in site.data.inventory %}
+<a href="/inventory/{{ container }}">{{ container.name }}</a><br>
+{% endfor %}
