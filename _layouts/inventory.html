@@ -6,5 +6,8 @@ layout: default
 
 {% for item in container.items %}
 {{ item.name }}<br>
-<img src="/inventory/{{ page.container }}/{{ item.img }}">
+<img 
+  style="object-fit: cover; width: 230px; height: 230px;"
+  src="/inventory/{{ page.container }}/{{ item.img }}"
+>
 {% endfor %}
