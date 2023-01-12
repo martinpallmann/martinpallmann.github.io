@@ -6,5 +6,5 @@ layout: default
 
 {% for item in container.items %}
 {{ item.name }}<br>
-<img src="/inventory/container[0]/{{ item.img }}">
+<img src="/inventory/{{ container[0] }}/{{ item.img }}">
 {% endfor %}
