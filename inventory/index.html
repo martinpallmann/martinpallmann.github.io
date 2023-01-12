@@ -1,0 +1,10 @@
+---
+title: Inventory
+permalink: /inventory
+layout: default
+---
+<h1>Inventory</h1>
+
+{% for container in site.data.inventory.containers %}
+<a href="{{ container.id }}/">{{ container.name }}</a><br>
+{% endfor %}

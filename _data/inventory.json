@@ -1,0 +1,14 @@
+{
+  "containers": [
+    {
+      "name": "Systainer Elektro 1",
+      "id": "systainer-elektro-1",
+      "items": [
+        {
+          "name": "Flachrundzange Knipex",
+          "img": "flachrundzange-knipex.jpg"
+        }
+      ]
+    }
+  ]
+}
