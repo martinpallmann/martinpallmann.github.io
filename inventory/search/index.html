@@ -27,7 +27,10 @@ permalink: /inventory/search
     dt.appendChild(document.createTextNode(x.obj.name));
     resultsContainer.appendChild(dt);
     const dd = document.createElement("dd");
-    dd.appendChild(document.createTextNode(x.obj.location));
+    const a = document.createElement("a");
+    a.appendChild(document.createTextNode(x.obj.location));
+    a.href = x.obj.url;
+    dd.appendChild(a);
     resultsContainer.appendChild(dd);
   });
   document.body.appendChild(resultsContainer);
