@@ -2,8 +2,6 @@
 title: Inventory Search
 permalink: /inventory/search
 ---
-<head></head>
-<body>
 <script src="https://cdn.jsdelivr.net/npm/fuzzysort@2.0.4/fuzzysort.min.js"></script>
 
 <script>
@@ -20,16 +18,11 @@ permalink: /inventory/search
     var hash = window.location.hash.substring(1);
 
     const results = fuzzysort.go(hash.substring(0, 3), inventory, { key: "name" });
-    const ul = document.createElement("ul");
     results.forEach(x => {
-      const li = document.createElement("li")
-      li.appendChild(document.createTextNode(x.obj.name + " befindet sich in " + x.obj.location));
-      ul.appendChild(li)
+      document.body.appendChild(document.createTextNode(x.obj.name + " befindet sich in " + x.obj.location + "\n"));
     });
-    document.body.appendChild(ul);
 
   } else {
       // No hash found
   }
 </script>
-</body>
