@@ -11,8 +11,8 @@ permalink: /inventory/search
   var raw = {{ site.data.inventory | jsonify }};
   var inventory = [];
 
-  for (const [key, value] of Object.entries(raw)) {
-    console.log(value);
+  for (const [key, i1] of Object.entries(raw)) {
+    console.log(i1);
     value.items.forEach(i2 => {
       inventory.push({ name: i2.name, location: i1.name });
     });
