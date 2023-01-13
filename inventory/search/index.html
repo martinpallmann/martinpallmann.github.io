@@ -22,7 +22,7 @@ permalink: /inventory/search
     const results = fuzzysort.go(hash.substring(0, 3), inventory, { key: "name" });
 
     results.forEach(x => {
-      document.body.appendChild(document.createTextNode(x.obj.name));
+      document.body.appendChild(document.createTextNode(x.obj.name + " befindet sich in " + x.obj.location));
       document.body.appendChild(document.createElement("br"));
     });
 
