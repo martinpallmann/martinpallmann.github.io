@@ -13,7 +13,7 @@ permalink: /inventory/search
 
   for (const [key, i1] of Object.entries(raw)) {
     console.log(i1);
-    value.items.forEach(i2 => {
+    i1.items.forEach(i2 => {
       inventory.push({ name: i2.name, location: i1.name, url: "/inventory/" + key + "#" + i2.img });
     });
   }
