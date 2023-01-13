@@ -24,9 +24,9 @@ permalink: /inventory/search
     if (results.length === 0) { 
       document.body.appendChild(document.createTextNode("Ich habe für " + hash + " nichts gefunden"));
     } else {
-      const ul = document.createElement(ul);
+      const ul = document.createElement("ul");
       results.forEach(x => {
-        const li = document.createElement(li);
+        const li = document.createElement("li");
         li.appendChild(document.createTextNode(x.obj.name + " befindet sich in " + x.obj.location));
         ul.appendChild(li);
       });
