@@ -13,6 +13,8 @@ permalink: /inventory/search
   
   const results = fuzzysort.go('wg', inventory, { key: "name" });
 
+  console.log(results);
+
   const resultsContainer = document.createElement("dl");
   results.foreach((x, i) => {
     const dt = document.createElement("dt");
