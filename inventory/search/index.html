@@ -19,14 +19,19 @@ permalink: /inventory/search
   if(window.location.hash) {
     var hash = window.location.hash.substring(1);
     const results = fuzzysort.go(hash.substring(0, 3), inventory, { key: "name" });
-    results.forEach(x => {
-      document.body.appendChild(document.createTextNode(x.obj.name + " befindet sich in " + x.obj.location + "\n"));
-      const br = document.createElement(br);
-      document.body.appendChild(br);
-    });
+    
+
     if (results.length === 0) { 
       document.body.appendChild(document.createTextNode("Ich habe für " + hash + " nichts gefunden"));
-     }
+    } else {
+      const ul = document.createElement(ul);
+      results.forEach(x => {
+        const li = document.createElement(li);
+        li.appendChild(document.createTextNode(x.obj.name + " befindet sich in " + x.obj.location));
+        ul.appendChild(li);
+      });
+      document.body.appendChild(ul);
+    }
   }
 </script>
 </body>
