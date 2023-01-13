@@ -11,15 +11,15 @@ permalink: /inventory/search
   var raw = {{ site.data.inventory | jsonify }};
   var inventory = [{ name: "Wago", location: "Systainer Elektro 1" }];
   
-  const results = fuzzysort.go('wg', inventory);
+  const results = fuzzysort.go('wg', inventory, { key: "name" });
 
   const resultsContainer = document.createElement("dl");
   results.foreach((x, i) => {
     const dt = document.createElement("dt");
-    dt.appendChild(document.createTextNode(x.target));
+    dt.appendChild(document.createTextNode(x.obj.name));
     resultsContainer.appendChild(dt);
     const dd = document.createElement("dd");
-    dd.appendChild(document.createTextNode(x.target));
+    dd.appendChild(document.createTextNode(x.obj.location));
     resultsContainer.appendChild(dd);
   });
   document.body.appendChild(resultsContainer);
