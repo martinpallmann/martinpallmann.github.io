@@ -3,24 +3,17 @@ layout: default
 title: Inventory Search
 permalink: /inventory/search
 ---
-<h1 id="header">Inventory Search</h1>
+<h1>Inventory Search</h1>
 
 <script src="https://cdn.jsdelivr.net/npm/fuzzysort@2.0.4/fuzzysort.min.js"></script>
 
 <script>
-  const data = [
-  {% for i1 in site.data.inventory %}
-    {% for i2 in i1.items %}
-      { "name": {{ i2.name }}, "location": {{ i1.name }} },
-    {% endfor %}
-  {% endfor %}
-  ];
-
+  var data = {{ site.data.inventory | jsonify }};
   console.log(data);
 
   const newDiv = document.createElement("div");
   const newContent = document.createTextNode("Hi there and greetings!");
   newDiv.appendChild(newContent);
   const currentDiv = document.getElementById("header");
-  document.body.insertAfter(newDiv, currentDiv);
+  document.body.appendChild(newDiv, currentDiv);
 </script>
