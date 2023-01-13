@@ -10,11 +10,13 @@ permalink: /inventory/search
 <script>
   var raw = {{ site.data.inventory | jsonify }};
   var inventory = [];
-  Object.entries(raw).forEach((k, i1) => {
-    i1.items.forEach(i2 => {
+
+  for (const [key, value] of Object.entries(raw)) {
+    console.log(value);
+    value.items.forEach(i2 => {
       inventory.push({ name: i2.name, location: i1.name });
     });
-  });
+  }
   
   const results = fuzzysort.go('wg', inventory, { key: "name" });
 
