@@ -8,12 +8,19 @@ permalink: /inventory/search
 <script src="https://cdn.jsdelivr.net/npm/fuzzysort@2.0.4/fuzzysort.min.js"></script>
 
 <script>
-  var data = {{ site.data.inventory | jsonify }};
-  console.log(data);
+  var raw = {{ site.data.inventory | jsonify }};
+  var inventory = [{ name: "Wago", location: "Systainer Elektro 1" }];
+  
+  const results = fuzzysort.go('wg', inventory);
 
-  const newDiv = document.createElement("div");
-  const newContent = document.createTextNode("Hi there and greetings!");
-  newDiv.appendChild(newContent);
-  const currentDiv = document.getElementById("header");
-  document.body.appendChild(newDiv, currentDiv);
+  const resultsContainer = document.createElement("dl");
+  results.foreach((x, i) => {
+    const dt = document.createElement("dt");
+    dt.appendChild(document.createTextNode(x.target));
+    resultsContainer.appendChild(dt);
+    const dd = document.createElement("dd");
+    dd.appendChild(document.createTextNode(x.target));
+    resultsContainer.appendChild(dd);
+  });
+  document.body.appendChild(resultsContainer);
 </script>
