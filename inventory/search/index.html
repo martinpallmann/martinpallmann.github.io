@@ -14,8 +14,8 @@ permalink: /inventory/search
   const results = fuzzysort.go('wg', inventory, { key: "name" });
 
   const resultsContainer = document.createElement("dl");
-  results.foreach(x => console.log(x.obj.name));
-  results.foreach(x => {
+  results.forEach(x => console.log(x.obj.name));
+  results.forEach(x => {
     const dt = document.createElement("dt");
     dt.appendChild(document.createTextNode(x.obj.name));
     resultsContainer.appendChild(dt);
