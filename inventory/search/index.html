@@ -20,13 +20,13 @@ permalink: /inventory/search
     var hash = window.location.hash.substring(1);
 
     const results = fuzzysort.go(hash.substring(0, 3), inventory, { key: "name" });
-    const ul = document.body.createElement("ul");
+    const ul = document.createElement("ul");
     results.forEach(x => {
-      const li = document.body.createElement("li")
+      const li = document.createElement("li")
       li.appendChild(document.createTextNode(x.obj.name + " befindet sich in " + x.obj.location));
       ul.appendChild(li)
     });
-    body.appendChild(ul);
+    document.body.appendChild(ul);
 
   } else {
       // No hash found
