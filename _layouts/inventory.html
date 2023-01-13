@@ -6,7 +6,7 @@ layout: default
 <ul class="inventory clearfix">
 {% for item in container.items %}
   <li>
-    <figure>
+    <figure id="{{ item.img }}">
       <img src="/inventory/{{ page.container }}/{{ item.img }}" alt="{{ item.name }}" />
       <figcaption>{{ item.name }}</figcaption>
     </figure>
