@@ -17,19 +17,28 @@ permalink: /inventory/search
     });
   }
   
-  const results = fuzzysort.go('wg', inventory, { key: "name" });
+  if(window.location.hash) {
+    var hash = window.location.hash.substring(1);
 
-  const resultsContainer = document.createElement("dl");
-  results.forEach(x => {
-    const dt = document.createElement("dt");
-    dt.appendChild(document.createTextNode(x.obj.name));
-    resultsContainer.appendChild(dt);
-    const dd = document.createElement("dd");
-    const a = document.createElement("a");
-    a.appendChild(document.createTextNode(x.obj.location));
-    a.href = x.obj.url;
-    dd.appendChild(a);
-    resultsContainer.appendChild(dd);
-  });
-  document.body.appendChild(resultsContainer);
+    const results = fuzzysort.go(hash, inventory, { key: "name" });
+
+    const resultsContainer = document.createElement("dl");
+    results.forEach(x => {
+      const dt = document.createElement("dt");
+      dt.appendChild(document.createTextNode(x.obj.name));
+      resultsContainer.appendChild(dt);
+      const dd = document.createElement("dd");
+      const a = document.createElement("a");
+      a.appendChild(document.createTextNode(x.obj.location));
+      a.href = x.obj.url;
+      dd.appendChild(a);
+      resultsContainer.appendChild(dd);
+    });
+    document.body.appendChild(resultsContainer);
+
+  } else {
+      // No hash found
+  }
+
+  
 </script>
