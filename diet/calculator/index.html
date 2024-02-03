@@ -1,0 +1,144 @@
+---
+title: Diet calculator
+permalink: /diet/calculator
+layout: default
+---
+<h1>Calorie Deficit Calculator</h1>
+
+<form id="diet" name="diet">
+  <table>
+    <tr>
+      <th style="text-align: left; font-weight: normal; padding-right: 10px;">
+        <label for="body_fat">Body fat percentage</label>
+      </th>
+      <td>
+        <input style="width:100%" type="number" 
+          id="body_fat" name="body_fat" min="0" max="100" onchange="calc()" />
+      </td>
+    </tr>
+    <tr>
+      <th style="text-align: left; font-weight: normal; padding-right: 10px;">
+        <legend>Sex</legend>
+      </th>
+      <td>
+        <input type="radio" id="female" name="sex" value="female" checked onchange="calc()" />
+        <label for="female">Female</label>
+        <input type="radio" id="male" name="sex" value="male" onchange="calc()" />
+        <label for="male">Male</label>
+      </td>
+    </tr>
+    <tr>
+      <th style="text-align: left; font-weight: normal; padding-right: 10px;">
+        <label for="age">Age</label>
+      </th>
+      <td>
+        <input style="width:100%" type="number" 
+          id="age" name="age" onchange="calc()" />
+      </td>
+    </tr>
+    <tr>
+      <th style="text-align: left; font-weight: normal; padding-right: 10px;">
+        <label for="weight">Weight</label>
+      </th>
+      <td>
+        <input type="number" 
+          id="weight" name="weight" onchange="calc()" /> kg
+      </td>
+    </tr>
+    <tr>
+      <th style="text-align: left; font-weight: normal; padding-right: 10px;">
+        <label for="height">Height</label>
+      </th>
+      <td>
+        <input type="number" 
+          id="height" name="height" onchange="calc()" /> cm
+      </td>
+    </tr>
+    <tr>
+      <th style="text-align: left; font-weight: normal; padding-right: 10px;">
+        <label for="activity_factor">Exercise</label>
+      </th>
+      <td>
+        <select style="width:100%" name="activity_factor" id="activity_factor" onchange="calc()" >
+          <option value="1.2">No exercise</option>
+          <option value="1.3">1-3 days per week</option>
+          <option value="1.5">4-5 days per week</option>
+          <option value="1.7">6-7 days per week</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th style="text-align: left; font-weight: normal; padding-right: 10px;">
+        <label for="meals">Meals per day</label>
+      </th>
+      <td>
+        <input style="width:100%" type="number" 
+          id="meals" name="meals" min="1" max="6" onchange="calc()" />
+      </td>
+    </tr>
+    <tr>
+      <th style="text-align: left;">Caloric intake (day)</th>
+      <td><b id="calories">0</b></td>
+    </tr>
+    <tr>
+      <th style="text-align: left;">Protein (day)</th>
+      <td><b id="protein_day">0</b></td>
+    </tr>
+    <tr>
+      <th style="text-align: left;">Protein (meal)</th>
+      <td><b id="protein_meal">0</b></td>
+    </tr>
+  </table>
+</form>
+
+<script type="text/javascript">
+  function calc() {
+    let caloric_deficit = 0.8;
+    let age = document.forms.diet.age.value;
+    let body_fat = document.forms.diet.body_fat.value;
+    let activity_factor = document.forms.diet.activity_factor.value;
+    let meals = document.forms.diet.meals.value;
+    let weight_kg = document.forms.diet.weight.value;
+    let height_cm = document.forms.diet.height.value;
+    let sex = document.forms.diet.sex.value;
+    let lean_and_trained = false;
+    let bmr = 0;
+    let body_fat_high = false;
+    if (body_fat < 16 && activity_factor > 1.3) {
+      lean_and_trained = true;
+    }
+    if (body_fat > 24 && sex === "male") {
+      body_fat_high = true;
+    }
+    if (body_fat > 29 && sex === "female") {
+      body_fat_high = true;
+    }
+    if (lean_and_trained) {
+      bmr = 24.8 * weight_kg + 10;
+    } else if (sex == "female") {
+      bmr = 10 * weight_kg + 6.25 * height_cm - 5 * age - 161;
+    } else {
+      bmr = 10 * weight_kg + 6.25 * height_cm - 5 * age + 5;
+    }
+    let tdee = bmr * activity_factor;
+    let calories = Math.ceil(tdee * caloric_deficit);
+
+    document.getElementById("calories").innerText = calories;
+
+    let protein_day = 0;
+
+    if (body_fat_high) {
+      protein_day = Math.ceil(1.76 * weight_kg);
+    } else {
+      protein_day = Math.ceil(2.2 * weight_kg);
+    }
+
+    document.getElementById("protein_day").innerText = protein_day;
+
+    let protein_meal = 0
+      try {
+        protein_meal = Math.ceil(protein_day / meals);
+      } catch (error) {}
+    document.getElementById("protein_meal").innerText = protein_meal;
+  }
+</script>
